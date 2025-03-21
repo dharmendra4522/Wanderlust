@@ -24,10 +24,16 @@ const listingSchema = new Schema({
     price: Number,
     location: String,
     country: String,
-    reviews: [{
+    reviews: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Review",
+        }
+    ],
+    owner:{
         type: Schema.Types.ObjectId,
-        ref: "Review",
-    }],
+        ref: "User"
+    }
 });
 
 listingSchema.post("findOneAndDelete", async (listing) => {
