@@ -1,25 +1,97 @@
 <style>
+  .navbar {
+    padding: 0.5rem 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Search Button */
   .search-btn {
     background-color: #fe424d;
     color: #fff;
     border-radius: 25px;
-    padding: 0 1rem 0 1rem;
+    padding: 0.4rem 1rem;
+    transition: background-color 0.3s ease;
   }
+  
   .search-btn:hover {
-    background-color: #fe424d;
+    background-color: #e33942;
     color: #fff;
-    /* border: 1px solid #000; */
   }
+
   .search-btn i {
-    display: inline;
     margin-right: 0.5rem;
   }
+
+  /* Search Input */
   .search-inp {
     border-radius: 25px;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0.5rem 1rem;
     font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    background-color: #fff;
+    width: 250px;
+    transition: width 0.3s ease;
   }
+
+  /* Navbar Link Styling */
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: #000;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    /* Make input and button stack vertically */
+    .search-inp {
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    .search-btn {
+      width: 100%;
+    }
+
+    .navbar-nav {
+      text-align: center;
+    }
+
+    .navbar-collapse {
+      padding: 1rem;
+      background-color: #f8f9fa;
+    }
+
+    /* Adjust Navbar Links */
+    .navbar-nav .nav-link {
+      padding: 0.8rem 0;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      border-radius: 10px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .search-inp {
+      width: 100%;
+      padding: 0.4rem;
+    }
+    .search-btn {
+      padding: 0.4rem;
+      font-size: 0.9rem;
+    }
+    .navbar-collapse {
+      padding: 1rem;
+      background-color: #f8f9fa;
+    }
+  }
+
 </style>
+
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="/listings"
@@ -64,3 +136,4 @@
     </div>
   </div>
 </nav>
+

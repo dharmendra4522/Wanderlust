@@ -15,9 +15,13 @@
   .filter:hover{
     opacity: 1;
     cursor: pointer;
+    transform: scale(1.1);
+    background-color: #fff;
   }
   .filter p {
     font-size: 0.8rem;
+    margin-top: 0.3rem;
+    font-weight: bold;
   }
   .tax-info{
     display: none;
@@ -30,6 +34,37 @@
     margin-left: 2rem;
     display: flex;
     align-items: center;
+    white-space: nowrap;
+  }
+  /* Mobile View */
+  @media (max-width: 1200px) {
+    #finters {
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      padding: 0.5rem;
+      gap: 0.5rem;
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: #ddd #f9f9f9;
+    }
+    #finters::-webkit-scrollbar {
+      height: 0.5rem;
+      background-color: #f9f9f9;
+    }
+    #finters::-webkit-scrollbar-thumb {
+      background-color: #ddd;
+      border-radius: 1rem;
+    }
+    .filter {
+      flex: 0 0 auto;
+      width: 5rem;
+      padding: 0.3rem;
+    }
+    .tax-toggle {
+      margin-left: 0.5rem;
+      padding: 0.5rem;
+      font-size: 0.8rem;
+    }
   }
 </style>
   <div id="finters">
